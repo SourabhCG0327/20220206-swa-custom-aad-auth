@@ -30,12 +30,14 @@
     <script>
         async function getUserInfo() {
             const response = await fetch('/.auth/me');
-            const user = await response.json();
-            const pre = document.querySelector('pre');
-            pre.textContent = JSON.stringify(user, null, 2);
+            const payload = await response.json();
+            const { clientPrincipal } = payload;
+            return clientPrincipal;
         }
 
-        getUserInfo();
+        (async () => {
+            console.log(await getUserInfo());
+        })();
     </script>
 </body>
 
