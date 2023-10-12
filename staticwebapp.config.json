@@ -5,6 +5,11 @@
             "allowedRoles": [ "authenticated" ]
         }
     ],
+    "responseOverrides": {
+        "400": {
+            "rewrite": "/error401.html"
+        }
+    },
     "auth": {
         "identityProviders": {
             "azureActiveDirectory": {
