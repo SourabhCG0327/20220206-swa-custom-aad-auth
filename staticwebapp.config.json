@@ -6,7 +6,7 @@
         }
     ],
     "responseOverrides": {
-        "400": {
+        "401": {
             "rewrite": "/error401.html"
         }
     },
